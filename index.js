@@ -14,6 +14,9 @@ mongoose
     .connect(process.env.MONGODB_URL)
     .then(()=>console.log('Conectando ao MongoDB'))
     .catch((err)=>console.log(err));
-
+    
+app.get('/', (req,res)=>[
+    res.send('Api rodando :)')
+])
 app.use(routes);
 app.listen(PORT, ()=>console.log(`Rodando na porta ${PORT}`))

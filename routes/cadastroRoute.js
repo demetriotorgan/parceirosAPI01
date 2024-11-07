@@ -3,7 +3,7 @@ const { getCadastros, saveCadastros } = require('../controllers/cadastroControle
 
 const router = Router();
 
-router.get('/', getCadastros);
-router.post('/save', saveCadastros);
+router.get('/api/usuarios', getCadastros);
+router.post('/api/usuarios', saveCadastros);
 
 module.exports = router;
